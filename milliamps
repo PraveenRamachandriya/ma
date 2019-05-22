@@ -1,0 +1,24 @@
+float r = 2.3;
+int v;
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0,INPUT);
+
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  v=analogRead(A0);
+  Serial.print(" .   analog_inPUt= ");
+  Serial.println(v);
+  float V=(v*5.0)/1024.0;
+  
+  
+  Serial.print(" .  v=");
+  Serial.print(V);
+float i=( V/r);
+Serial.print("    mA=");
+Serial.print(i);
+}
